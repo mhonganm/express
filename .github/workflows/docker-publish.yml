@@ -31,3 +31,19 @@ jobs:
         run: |
           echo "Successfully pushed mhonganm/express:latest to Docker Hub."
 
+deploy-to-flyio:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://exp-blue-bird-9709.fly.dev/
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Fly.io
+        uses: superfly/fly-release-action@v1 
+        with:
+          app: exp-blue-bird-9709 
+          token: ${{ secrets.FLY_API_TOKEN }} 
