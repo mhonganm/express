@@ -45,5 +45,6 @@ jobs:
       - name: Deploy to Fly.io
         uses: superfly/flyctl-actions@v1
         with:
-          app: exp-blue-bird-9709 
-          token: ${{ secrets.FLY_API_TOKEN }} 
+          args: "deploy --app exp-blue-bird-9709"
+        env:
+          FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }} 
