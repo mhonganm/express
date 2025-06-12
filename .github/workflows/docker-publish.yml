@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "Successfully pushed mhonganm/express:latest to Docker Hub."
 
-deploy-to-flyio:
+  deploy-to-flyio:
     needs: build-and-push
     runs-on: ubuntu-latest
     environment:
