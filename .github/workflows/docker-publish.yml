@@ -25,9 +25,9 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: mhonganm/express-app:latest
+          tags: mhonganm/express:latest
 
       - name: Verify Push (Optional)
         run: |
-          echo "Successfully pushed mhonganm/express-app:latest to Docker Hub."
+          echo "Successfully pushed mhonganm/express:latest to Docker Hub."
 
