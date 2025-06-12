@@ -2,7 +2,7 @@ services:
   my-node-app:
     build:
       context: .
-    image: mhonganm/express:latest
+    image: honganmaki/express:latest
     container_name: my-node-app-container
     ports:
       - "3000:3000"
