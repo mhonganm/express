@@ -43,7 +43,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Fly.io
-        uses: superfly/flyctl-actions@v1.5 
+        uses: superfly/flyctl-actions@v1
         with:
           app: exp-blue-bird-9709 
           token: ${{ secrets.FLY_API_TOKEN }} 
